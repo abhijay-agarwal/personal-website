@@ -77,6 +77,7 @@ export default function Portfolio() {
         "Implemented automated email ingestion and batching algorithm using AI techniques to parse common issues from constituent messages",
       status: "Closed source (contractor work)",
       link: null,
+      companyLink: "https://get-civic.com",
     },
     {
       title: "Flagler Health - Healthcare Data Analysis",
@@ -87,6 +88,7 @@ export default function Portfolio() {
         "Built physician-patient network visualizations and identified advanced procedure patterns to improve patient care quality",
       status: "Closed source (contractor work)",
       link: null,
+      companyLink: "https://flaglerhealth.org",
     },
     {
       title: "Shades - News Automation Tool",
@@ -97,6 +99,7 @@ export default function Portfolio() {
         "Decreased time-to-publish by ~10x; Built Chrome extension for user engagement",
       status: "Closed source (startup work)",
       link: null,
+      companyLink: "https://shades.news",
     },
     {
       title: "Instahub - Energy Dashboard",
@@ -107,6 +110,7 @@ export default function Portfolio() {
         "Improved user experience and data visualization for energy monitoring",
       status: "Closed source (contractor work)",
       link: null,
+      companyLink: "https://getinstahub.com",
     },
     {
       title: "YelpBnB - Property Search Platform",
@@ -273,7 +277,7 @@ export default function Portfolio() {
       {/* Projects Section */}
       <section
         id="projects"
-        className="pt-12 pb-10 px-4 sm:px-6 lg:px-8 max-w-6xl mx-auto bg-gray-50"
+        className="py-20 px-4 sm:px-6 lg:px-8 max-w-6xl mx-auto bg-gray-50"
       >
         <h2 className="text-3xl font-bold mb-12 text-center">Projects</h2>
         <div className="grid gap-8 md:grid-cols-2">
@@ -287,17 +291,32 @@ export default function Portfolio() {
                   <CardTitle className="text-xl font-bold text-balance">
                     {project.title}
                   </CardTitle>
-                  {project.link && (
-                    <Button variant="ghost" size="sm" asChild>
-                      <a
-                        href={project.link}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                      >
-                        <ExternalLink size={16} />
-                      </a>
-                    </Button>
-                  )}
+                  <div className="flex gap-2">
+                    {project.companyLink && (
+                      <Button variant="ghost" size="sm" asChild>
+                        <a
+                          href={project.companyLink}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          title="Company Website"
+                        >
+                          <ExternalLink size={16} />
+                        </a>
+                      </Button>
+                    )}
+                    {project.link && (
+                      <Button variant="ghost" size="sm" asChild>
+                        <a
+                          href={project.link}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          title="GitHub Repository"
+                        >
+                          <Github size={16} />
+                        </a>
+                      </Button>
+                    )}
+                  </div>
                 </div>
                 <CardDescription className="text-gray-600 text-pretty">
                   {project.description}
