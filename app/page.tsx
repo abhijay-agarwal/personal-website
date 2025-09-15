@@ -277,7 +277,7 @@ export default function Portfolio() {
       {/* Projects Section */}
       <section
         id="projects"
-        className="pt-8 pb-10 px-4 sm:px-6 lg:px-8 max-w-6xl mx-auto bg-gray-50"
+        className="py-12 px-4 sm:px-6 lg:px-8 max-w-6xl mx-auto bg-gray-50"
       >
         <h2 className="text-3xl font-bold mb-12 text-center">Projects</h2>
         <div className="grid gap-8 md:grid-cols-2">
@@ -352,7 +352,7 @@ export default function Portfolio() {
       {/* Skills Section */}
       <section
         id="skills"
-        className="py-20 px-4 sm:px-6 lg:px-8 max-w-4xl mx-auto"
+        className="py-12 px-4 sm:px-6 lg:px-8 max-w-4xl mx-auto"
       >
         <h2 className="text-3xl font-bold mb-12 text-center">Skills</h2>
         <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
@@ -374,7 +374,7 @@ export default function Portfolio() {
       {/* Education Section */}
       <section
         id="education"
-        className="py-20 px-4 sm:px-6 lg:px-8 max-w-4xl mx-auto bg-gray-50"
+        className="py-12 px-4 sm:px-6 lg:px-8 max-w-4xl mx-auto bg-gray-50"
       >
         <h2 className="text-3xl font-bold mb-12 text-center">Education</h2>
         <Card className="border-gray-200">
