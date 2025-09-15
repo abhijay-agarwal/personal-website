@@ -1,59 +1,77 @@
-"use client"
+"use client";
 
-import { useState, useEffect } from "react"
-import { Button } from "@/components/ui/button"
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
-import { Badge } from "@/components/ui/badge"
-import { Github, Linkedin, Mail, ExternalLink, Download, Menu, X } from "lucide-react"
+import { useState, useEffect } from "react";
+import { Button } from "@/components/ui/button";
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardHeader,
+  CardTitle,
+} from "@/components/ui/card";
+import { Badge } from "@/components/ui/badge";
+import {
+  Github,
+  Linkedin,
+  Mail,
+  ExternalLink,
+  Download,
+  Menu,
+  X,
+} from "lucide-react";
 
 export default function Portfolio() {
-  const [activeSection, setActiveSection] = useState("about")
-  const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
+  const [activeSection, setActiveSection] = useState("about");
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
-      const sections = ["about", "projects", "skills", "education", "contact"]
-      const scrollPosition = window.scrollY + 100
+      const sections = ["about", "projects", "skills", "education", "contact"];
+      const scrollPosition = window.scrollY + 100;
 
       for (const section of sections) {
-        const element = document.getElementById(section)
+        const element = document.getElementById(section);
         if (element) {
-          const offsetTop = element.offsetTop
-          const offsetHeight = element.offsetHeight
+          const offsetTop = element.offsetTop;
+          const offsetHeight = element.offsetHeight;
 
-          if (scrollPosition >= offsetTop && scrollPosition < offsetTop + offsetHeight) {
-            setActiveSection(section)
-            break
+          if (
+            scrollPosition >= offsetTop &&
+            scrollPosition < offsetTop + offsetHeight
+          ) {
+            setActiveSection(section);
+            break;
           }
         }
       }
-    }
+    };
 
-    window.addEventListener("scroll", handleScroll)
-    return () => window.removeEventListener("scroll", handleScroll)
-  }, [])
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
 
   const scrollToSection = (sectionId: string) => {
-    const element = document.getElementById(sectionId)
+    const element = document.getElementById(sectionId);
     if (element) {
-      element.scrollIntoView({ behavior: "smooth" })
+      element.scrollIntoView({ behavior: "smooth" });
     }
-    setMobileMenuOpen(false)
-  }
+    setMobileMenuOpen(false);
+  };
 
   const downloadResume = () => {
-    const link = document.createElement("a")
-    link.href = "/resume/ABHIJAY_AGARWAL_RESUME.pdf"
-    link.download = "ABHIJAY_AGARWAL_RESUME.pdf"
-    document.body.appendChild(link)
-    link.click()
-    document.body.removeChild(link)
-  }
+    const link = document.createElement("a");
+    link.href = "/resume/ABHIJAY_AGARWAL_RESUME.pdf";
+    link.download = "ABHIJAY_AGARWAL_RESUME.pdf";
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+  };
 
   const projects = [
     {
       title: "Civic - Constituent Management Platform",
-      description: "Built MVP constituent management service (CMS) platform for AI startup Civic (get-civic.com)",
+      description:
+        "Built MVP constituent management service (CMS) platform for AI startup Civic (get-civic.com)",
       technologies: ["TypeScript", "React", "Node.js", "Express", "Supabase"],
       achievement:
         "Implemented automated email ingestion and batching algorithm using AI techniques to parse common issues from constituent messages",
@@ -72,9 +90,11 @@ export default function Portfolio() {
     },
     {
       title: "Shades - News Automation Tool",
-      description: "Developed in-house tool for news startup to automate article batching through NLP techniques",
+      description:
+        "Developed in-house tool for news startup to automate article batching through NLP techniques",
       technologies: ["React", "TypeScript", "Firebase", "Chrome Extension API"],
-      achievement: "Decreased time-to-publish by ~10x; Built Chrome extension for user engagement",
+      achievement:
+        "Decreased time-to-publish by ~10x; Built Chrome extension for user engagement",
       status: "Closed source (startup work)",
       link: null,
     },
@@ -83,7 +103,8 @@ export default function Portfolio() {
       description:
         "Created revamped frontend including login flow and digital dashboard for energy conservation company",
       technologies: ["JavaScript", "React", "Node.js", "Express", "Firebase"],
-      achievement: "Improved user experience and data visualization for energy monitoring",
+      achievement:
+        "Improved user experience and data visualization for energy monitoring",
       status: "Closed source (contractor work)",
       link: null,
     },
@@ -101,13 +122,20 @@ export default function Portfolio() {
       title: "Spotify@Penn - Music Sharing Platform",
       description:
         "Published MEVN stack web application allowing members of UPenn community to share music tastes and view popular/trending music at the school",
-      technologies: ["MongoDB", "Express", "Vue.js", "Node.js", "Spotify API", "OAuth"],
+      technologies: [
+        "MongoDB",
+        "Express",
+        "Vue.js",
+        "Node.js",
+        "Spotify API",
+        "OAuth",
+      ],
       achievement:
         "Integrated Spotify API using OAuth to extract user data and connected to MongoDB backend, with Express/Node.js for data retrieval",
       status: "Open source",
       link: "https://github.com/cis350/project-spotify-penn",
     },
-  ]
+  ];
 
   const skills = {
     Languages: ["TypeScript", "JavaScript", "Python", "SQL"],
@@ -116,7 +144,7 @@ export default function Portfolio() {
     Databases: ["Firebase", "Supabase"],
     "Data & ML": ["Pandas", "Jupyter", "NumPy", "NLP"],
     Cloud: ["AWS EC2"],
-  }
+  };
 
   return (
     <div className="min-h-screen bg-white text-black font-sans">
@@ -128,21 +156,28 @@ export default function Portfolio() {
 
             {/* Desktop Navigation */}
             <div className="hidden md:flex space-x-8">
-              {["about", "projects", "skills", "education", "contact"].map((section) => (
-                <button
-                  key={section}
-                  onClick={() => scrollToSection(section)}
-                  className={`capitalize transition-colors hover:text-gray-600 ${
-                    activeSection === section ? "text-black font-semibold" : "text-gray-500"
-                  }`}
-                >
-                  {section}
-                </button>
-              ))}
+              {["about", "projects", "skills", "education", "contact"].map(
+                (section) => (
+                  <button
+                    key={section}
+                    onClick={() => scrollToSection(section)}
+                    className={`capitalize transition-colors hover:text-gray-600 ${
+                      activeSection === section
+                        ? "text-black font-semibold"
+                        : "text-gray-500"
+                    }`}
+                  >
+                    {section}
+                  </button>
+                )
+              )}
             </div>
 
             {/* Mobile Menu Button */}
-            <button className="md:hidden" onClick={() => setMobileMenuOpen(!mobileMenuOpen)}>
+            <button
+              className="md:hidden"
+              onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+            >
               {mobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
             </button>
           </div>
@@ -150,22 +185,24 @@ export default function Portfolio() {
           {/* Mobile Navigation */}
           {mobileMenuOpen && (
             <div className="md:hidden py-4 border-t border-gray-200">
-              {["about", "projects", "skills", "education", "contact"].map((section) => (
-                <button
-                  key={section}
-                  onClick={() => scrollToSection(section)}
-                  className="block w-full text-left py-2 capitalize text-gray-600 hover:text-black"
-                >
-                  {section}
-                </button>
-              ))}
+              {["about", "projects", "skills", "education", "contact"].map(
+                (section) => (
+                  <button
+                    key={section}
+                    onClick={() => scrollToSection(section)}
+                    className="block w-full text-left py-2 capitalize text-gray-600 hover:text-black"
+                  >
+                    {section}
+                  </button>
+                )
+              )}
             </div>
           )}
         </div>
       </nav>
 
       {/* Header Section */}
-      <header className="pt-32 pb-20 px-4 sm:px-6 lg:px-8 max-w-6xl mx-auto">
+      <header className="pt-32 px-4 sm:px-6 lg:px-8 max-w-6xl mx-auto">
         <div className="text-center">
           <div className="mb-8">
             <img
@@ -175,12 +212,15 @@ export default function Portfolio() {
               style={{ objectPosition: "50% 20%" }}
             />
           </div>
-          <h1 className="text-4xl sm:text-6xl font-bold mb-4 text-balance">Abhijay Agarwal</h1>
+          <h1 className="text-4xl sm:text-6xl font-bold mb-4 text-balance">
+            Abhijay Agarwal
+          </h1>
           <p className="text-xl sm:text-2xl text-gray-600 mb-6 text-balance">
             Full-stack engineer passionate about data-driven applications
           </p>
           <p className="text-sm sm:text-base text-gray-500 mb-8 text-pretty">
-            Jerome Fisher M&T Program | University of Pennsylvania | Expected Graduation: May 2026 | GPA: 3.8
+            Jerome Fisher M&T Program | University of Pennsylvania | Expected
+            Graduation: May 2026 | GPA: 3.8
           </p>
 
           {/* Social Links */}
@@ -201,7 +241,10 @@ export default function Portfolio() {
             >
               <Linkedin size={24} />
             </a>
-            <a href="mailto:abhiijay@wharton.upenn.edu" className="text-gray-600 hover:text-black transition-colors">
+            <a
+              href="mailto:abhiijay@wharton.upenn.edu"
+              className="text-gray-600 hover:text-black transition-colors"
+            >
               <Mail size={24} />
             </a>
           </div>
@@ -209,43 +252,66 @@ export default function Portfolio() {
       </header>
 
       {/* About Section */}
-      <section id="about" className="py-20 px-4 sm:px-6 lg:px-8 max-w-4xl mx-auto">
+      <section
+        id="about"
+        className="py-20 px-4 sm:px-6 lg:px-8 max-w-4xl mx-auto"
+      >
         <h2 className="text-3xl font-bold mb-8 text-center">About</h2>
         <div className="text-lg leading-relaxed text-gray-700 text-pretty">
           <p>
-            I'm a student in the Jerome Fisher Program in Management & Technology at the University of Pennsylvania,
-            pursuing dual degrees in Computer Science and Business. I specialize in creating data-driven solutions that
-            solve real business problems, from constituent management platforms to healthcare analytics. My work spans
-            from MVP development for startups to working with large data sets to draw real business insights for clients.
-            over 2x.
+            I'm a student in the Jerome Fisher Program in Management &
+            Technology at the University of Pennsylvania, pursuing dual degrees
+            in Computer Science and Business. I specialize in creating
+            data-driven solutions that solve real business problems, from
+            constituent management platforms to healthcare analytics. My work
+            spans from MVP development for startups to working with large data
+            sets to draw real business insights for clients. over 2x.
           </p>
         </div>
       </section>
 
       {/* Projects Section */}
-      <section id="projects" className="py-20 px-4 sm:px-6 lg:px-8 max-w-6xl mx-auto bg-gray-50">
+      <section
+        id="projects"
+        className="py-20 px-4 sm:px-6 lg:px-8 max-w-6xl mx-auto bg-gray-50"
+      >
         <h2 className="text-3xl font-bold mb-12 text-center">Projects</h2>
         <div className="grid gap-8 md:grid-cols-2">
           {projects.map((project, index) => (
-            <Card key={index} className="border-gray-200 hover:shadow-lg transition-shadow">
+            <Card
+              key={index}
+              className="border-gray-200 hover:shadow-lg transition-shadow"
+            >
               <CardHeader>
                 <div className="flex justify-between items-start">
-                  <CardTitle className="text-xl font-bold text-balance">{project.title}</CardTitle>
+                  <CardTitle className="text-xl font-bold text-balance">
+                    {project.title}
+                  </CardTitle>
                   {project.link && (
                     <Button variant="ghost" size="sm" asChild>
-                      <a href={project.link} target="_blank" rel="noopener noreferrer">
+                      <a
+                        href={project.link}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
                         <ExternalLink size={16} />
                       </a>
                     </Button>
                   )}
                 </div>
-                <CardDescription className="text-gray-600 text-pretty">{project.description}</CardDescription>
+                <CardDescription className="text-gray-600 text-pretty">
+                  {project.description}
+                </CardDescription>
               </CardHeader>
               <CardContent>
                 <div className="space-y-4">
                   <div>
-                    <p className="font-semibold text-sm mb-2">Key Achievement:</p>
-                    <p className="text-sm text-gray-600 text-pretty">{project.achievement}</p>
+                    <p className="font-semibold text-sm mb-2">
+                      Key Achievement:
+                    </p>
+                    <p className="text-sm text-gray-600 text-pretty">
+                      {project.achievement}
+                    </p>
                   </div>
 
                   <div className="flex flex-wrap gap-2">
@@ -265,7 +331,10 @@ export default function Portfolio() {
       </section>
 
       {/* Skills Section */}
-      <section id="skills" className="py-20 px-4 sm:px-6 lg:px-8 max-w-4xl mx-auto">
+      <section
+        id="skills"
+        className="py-20 px-4 sm:px-6 lg:px-8 max-w-4xl mx-auto"
+      >
         <h2 className="text-3xl font-bold mb-12 text-center">Skills</h2>
         <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
           {Object.entries(skills).map(([category, skillList]) => (
@@ -284,21 +353,29 @@ export default function Portfolio() {
       </section>
 
       {/* Education Section */}
-      <section id="education" className="py-20 px-4 sm:px-6 lg:px-8 max-w-4xl mx-auto bg-gray-50">
+      <section
+        id="education"
+        className="py-20 px-4 sm:px-6 lg:px-8 max-w-4xl mx-auto bg-gray-50"
+      >
         <h2 className="text-3xl font-bold mb-12 text-center">Education</h2>
         <Card className="border-gray-200">
           <CardHeader>
             <CardTitle className="text-xl font-bold text-balance">
-              University of Pennsylvania - Jerome Fisher Program in Management & Technology (M&T)
+              University of Pennsylvania - Jerome Fisher Program in Management &
+              Technology (M&T)
             </CardTitle>
           </CardHeader>
           <CardContent className="space-y-4">
             <div>
               <p className="font-semibold">B.A.S. in Computer Science</p>
-              <p className="text-sm text-gray-600">School of Engineering and Applied Science</p>
+              <p className="text-sm text-gray-600">
+                School of Engineering and Applied Science
+              </p>
             </div>
             <div>
-              <p className="font-semibold">B.S. in Economics with concentration in Business Analytics</p>
+              <p className="font-semibold">
+                B.S. in Economics with concentration in Business Analytics
+              </p>
               <p className="text-sm text-gray-600">The Wharton School</p>
             </div>
             <div className="flex flex-col sm:flex-row sm:justify-between sm:items-center gap-2">
@@ -312,8 +389,9 @@ export default function Portfolio() {
             <div>
               <p className="font-semibold text-sm mb-2">Relevant Coursework:</p>
               <p className="text-sm text-gray-600">
-                Big Data Analytics, Databases & Information Systems, Software Design/Engineering, Data Structures &
-                Algorithms, Management of Technology, AI, Business and Society
+                Big Data Analytics, Databases & Information Systems, Software
+                Design/Engineering, Data Structures & Algorithms, Management of
+                Technology, AI, Business and Society
               </p>
             </div>
           </CardContent>
@@ -321,13 +399,19 @@ export default function Portfolio() {
       </section>
 
       {/* Contact Section */}
-      <section id="contact" className="py-20 px-4 sm:px-6 lg:px-8 max-w-4xl mx-auto">
+      <section
+        id="contact"
+        className="py-20 px-4 sm:px-6 lg:px-8 max-w-4xl mx-auto"
+      >
         <h2 className="text-3xl font-bold mb-12 text-center">Contact</h2>
         <div className="text-center space-y-6">
           <div className="space-y-4">
             <div className="flex items-center justify-center space-x-2">
               <Mail size={20} />
-              <a href="mailto:abhiijay@wharton.upenn.edu" className="text-lg hover:text-gray-600 transition-colors">
+              <a
+                href="mailto:abhiijay@wharton.upenn.edu"
+                className="text-lg hover:text-gray-600 transition-colors"
+              >
                 abhiijay@wharton.upenn.edu
               </a>
             </div>
@@ -355,7 +439,10 @@ export default function Portfolio() {
             </div>
           </div>
 
-          <Button onClick={downloadResume} className="bg-black text-white hover:bg-gray-800 transition-colors">
+          <Button
+            onClick={downloadResume}
+            className="bg-black text-white hover:bg-gray-800 transition-colors"
+          >
             <Download size={16} className="mr-2" />
             Download Resume
           </Button>
@@ -367,5 +454,5 @@ export default function Portfolio() {
         <p>&copy; 2025 Abhijay Agarwal. Last updated: September 2025</p>
       </footer>
     </div>
-  )
+  );
 }
