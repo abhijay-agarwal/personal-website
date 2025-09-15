@@ -215,10 +215,10 @@ export default function Portfolio() {
           <h1 className="text-4xl sm:text-6xl font-bold mb-4 text-balance">
             Abhijay Agarwal
           </h1>
-          <p className="text-xl sm:text-2xl text-gray-600 mb-6 text-balance">
+          <p className="text-xl sm:text-2xl text-gray-600 mb-4 text-balance">
             Full-stack engineer passionate about data-driven applications
           </p>
-          <p className="text-sm sm:text-base text-gray-500 mb-8 text-pretty">
+          <p className="text-sm sm:text-base text-gray-500 mb-6 text-pretty">
             Jerome Fisher M&T Program | University of Pennsylvania | Expected
             Graduation: May 2026 | GPA: 3.8
           </p>
@@ -261,11 +261,11 @@ export default function Portfolio() {
           <p>
             I'm a student in the Jerome Fisher Program in Management &
             Technology at the University of Pennsylvania, pursuing dual degrees
-            in Computer Science and Business. I specialize in creating
+            in Computer Science and Business Analytics. I specialize in creating
             data-driven solutions that solve real business problems, from
             constituent management platforms to healthcare analytics. My work
             spans from MVP development for startups to working with large data
-            sets to draw real business insights for clients. over 2x.
+            sets to draw real business insights for clients.
           </p>
         </div>
       </section>
