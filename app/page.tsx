@@ -256,7 +256,7 @@ export default function Portfolio() {
         id="about"
         className="py-12 px-4 sm:px-6 lg:px-8 max-w-4xl mx-auto"
       >
-        <h2 className="text-3xl font-bold mb-8 text-center">About</h2>
+        <h2 className="text-3xl font-bold mb-4 text-center">About</h2>
         <div className="text-lg leading-relaxed text-gray-700 text-pretty">
           <p>
             I'm a student in the Jerome Fisher Program in Management &
@@ -273,7 +273,7 @@ export default function Portfolio() {
       {/* Projects Section */}
       <section
         id="projects"
-        className="py-20 px-4 sm:px-6 lg:px-8 max-w-6xl mx-auto bg-gray-50"
+        className="pt-12 pb-10 px-4 sm:px-6 lg:px-8 max-w-6xl mx-auto bg-gray-50"
       >
         <h2 className="text-3xl font-bold mb-12 text-center">Projects</h2>
         <div className="grid gap-8 md:grid-cols-2">
