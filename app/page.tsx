@@ -277,7 +277,7 @@ export default function Portfolio() {
       {/* Projects Section */}
       <section
         id="projects"
-        className="py-20 px-4 sm:px-6 lg:px-8 max-w-6xl mx-auto bg-gray-50"
+        className="pt-8 pb-10 px-4 sm:px-6 lg:px-8 max-w-6xl mx-auto bg-gray-50"
       >
         <h2 className="text-3xl font-bold mb-12 text-center">Projects</h2>
         <div className="grid gap-8 md:grid-cols-2">
