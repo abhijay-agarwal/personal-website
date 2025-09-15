@@ -254,7 +254,7 @@ export default function Portfolio() {
       {/* About Section */}
       <section
         id="about"
-        className="py-20 px-4 sm:px-6 lg:px-8 max-w-4xl mx-auto"
+        className="py-12 px-4 sm:px-6 lg:px-8 max-w-4xl mx-auto"
       >
         <h2 className="text-3xl font-bold mb-8 text-center">About</h2>
         <div className="text-lg leading-relaxed text-gray-700 text-pretty">
