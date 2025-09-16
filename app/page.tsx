@@ -264,7 +264,7 @@ export default function Portfolio() {
         <div className="text-lg leading-relaxed text-gray-700 text-pretty">
           <p>
             I'm a student in the Jerome Fisher Program in Management &
-            Technology at the University of Pennsylvania, pursuing dual degrees
+            Technology at the University of Pennsylvania pursuing dual degrees
             in Computer Science and Business Analytics. I specialize in creating
             data-driven solutions that solve real business problems, from
             constituent management platforms to healthcare analytics. My work
