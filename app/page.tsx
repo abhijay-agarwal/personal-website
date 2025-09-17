@@ -258,7 +258,7 @@ export default function Portfolio() {
       {/* About Section */}
       <section
         id="about"
-        className="py-12 px-4 sm:px-6 lg:px-8 max-w-4xl mx-auto"
+        className="py-10 px-4 sm:px-6 lg:px-8 max-w-4xl mx-auto"
       >
         <h2 className="text-3xl font-bold mb-4 text-center">About</h2>
         <div className="text-lg leading-relaxed text-gray-700 text-pretty">
@@ -279,7 +279,7 @@ export default function Portfolio() {
       {/* Projects Section */}
       <section
         id="projects"
-        className="py-12 px-4 sm:px-6 lg:px-8 max-w-6xl mx-auto bg-gray-50"
+        className="py-10 px-4 sm:px-6 lg:px-8 max-w-6xl mx-auto bg-gray-50"
       >
         <h2 className="text-3xl font-bold mb-12 text-center">Projects</h2>
         <div className="grid gap-8 md:grid-cols-2">
@@ -354,7 +354,7 @@ export default function Portfolio() {
       {/* Skills Section */}
       <section
         id="skills"
-        className="py-12 px-4 sm:px-6 lg:px-8 max-w-4xl mx-auto"
+        className="py-10 px-4 sm:px-6 lg:px-8 max-w-4xl mx-auto"
       >
         <h2 className="text-3xl font-bold mb-10 text-center">Skills</h2>
         <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
@@ -376,7 +376,7 @@ export default function Portfolio() {
       {/* Education Section */}
       <section
         id="education"
-        className="py-12 px-4 sm:px-6 lg:px-8 max-w-4xl mx-auto bg-gray-50"
+        className="py-10 px-4 sm:px-6 lg:px-8 max-w-4xl mx-auto bg-gray-50"
       >
         <h2 className="text-3xl font-bold mb-10 text-center">Education</h2>
         <Card className="border-gray-200">
@@ -422,9 +422,9 @@ export default function Portfolio() {
       {/* Contact Section */}
       <section
         id="contact"
-        className="py-20 px-4 sm:px-6 lg:px-8 max-w-4xl mx-auto"
+        className="py-10 px-4 sm:px-6 lg:px-8 max-w-4xl mx-auto"
       >
-        <h2 className="text-3xl font-bold mb-12 text-center">Contact</h2>
+        <h2 className="text-3xl font-bold mb-10 text-center">Contact</h2>
         <div className="text-center space-y-6">
           <div className="space-y-4">
             <div className="flex items-center justify-center space-x-2">
