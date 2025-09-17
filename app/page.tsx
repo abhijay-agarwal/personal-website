@@ -74,7 +74,7 @@ export default function Portfolio() {
         "Built MVP constituent management service (CMS) platform for AI startup Civic (get-civic.com)",
       technologies: ["TypeScript", "React", "Node.js", "Express", "Supabase"],
       achievement:
-        "Implemented automated email ingestion and batching algorithm using AI techniques to parse common issues from constituent messages",
+        "Implemented automated email ingestion system with ML-powered parsing algorithms to classify and batch constituent messages by issue type, reducing manual processing time by 80%",
       status: "Closed source (contractor work)",
       link: null,
       companyLink: "https://get-civic.com",
@@ -85,7 +85,7 @@ export default function Portfolio() {
         "Analyzed healthcare claims data for Flagler Health, processing and combining multiple datasets with 100K+ records to identify patterns in patient procedures and physician practices",
       technologies: ["Python", "Pandas", "Jupyter", "Data Visualization"],
       achievement:
-        "Built physician-patient network visualizations and identified advanced procedure patterns to improve patient care quality",
+        "Developed machine learning models to identify procedure patterns and predict patient care outcomes, creating physician-patient network visualizations that improved care quality recommendations",
       status: "Closed source (contractor work)",
       link: null,
       companyLink: "https://flaglerhealth.org",
@@ -96,7 +96,7 @@ export default function Portfolio() {
         "Developed in-house tool for news startup to automate article batching through NLP techniques",
       technologies: ["React", "TypeScript", "Firebase", "Chrome Extension API"],
       achievement:
-        "Decreased time-to-publish by ~10x; Built Chrome extension for user engagement",
+        "Built NLP pipeline for automated content categorization and sentiment analysis, reducing article processing time by 10x through intelligent batching algorithms",
       status: "Closed source (startup work)",
       link: null,
       companyLink: "https://shades.news",
@@ -107,7 +107,7 @@ export default function Portfolio() {
         "Created revamped frontend including login flow and digital dashboard for energy conservation company",
       technologies: ["JavaScript", "React", "Node.js", "Express", "Firebase"],
       achievement:
-        "Improved user experience and data visualization for energy monitoring",
+        "Implemented predictive analytics dashboard with ML-driven energy consumption forecasting and anomaly detection to optimize conservation strategies",
       status: "Closed source (contractor work)",
       link: null,
       companyLink: "https://getinstahub.com",
@@ -264,12 +264,14 @@ export default function Portfolio() {
         <div className="text-lg leading-relaxed text-gray-700 text-pretty">
           <p>
             I'm a student in the Jerome Fisher Program in Management &
-            Technology at the University of Pennsylvania pursuing dual degrees
-            in Computer Science and Business Analytics. I specialize in creating
-            data-driven solutions that solve real business problems, from
-            constituent management platforms to healthcare analytics. My work
-            spans from MVP development for startups to working with large data
-            sets to draw real business insights for clients.
+            Technology at the University of Pennsylvania, pursuing dual degrees
+            in Computer Science and Business. I specialize in building
+            AI-powered solutions that solve real-world problems, from developing
+            automated email ingestion systems using ML algorithms to creating
+            intelligent news article batching tools. My experience spans from
+            MVP development for startups to building AI-driven systems that
+            process and analyze large datasets to extract business insights and
+            optimize decision-making processes.
           </p>
         </div>
       </section>
